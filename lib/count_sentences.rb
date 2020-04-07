@@ -15,6 +15,6 @@ self.end_with?("!")
   end
 
   def count_sentences
-    self.spit(/\.|\?|\!/)
+    self.split(/\.|\?|\!/).delete_if {|s| s.length < 2}
 end
 end
